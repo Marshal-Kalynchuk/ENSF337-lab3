@@ -35,7 +35,24 @@ int main() {
 }
 
 void pascal_triangle(int n) {
-    // STUDENTS MUST COMPLETE THE REST OF IMPLEMENATION OF THIS FUNCTION
+    int i, j, num = 1;
+    // Loops through Rows
+    for (i = 0; i < n; i++) {
+        printf("Row %2d:", i);
+        // Loops through "Columns"
+        for (j = 0; j <= i; j++) {
+            // Prevent division by zero & set 1 for first iteration
+            if (i == 0 || j == 0) {
+                num = 1;
+            }   
+            // Calculate the number
+            else {
+                num = num * (i - j + 1) / j;
+            }
+            printf("%6d", num);
+        }
+        printf("\n");
+    }
 }
 
 
