@@ -45,9 +45,7 @@ int main(void)
 void try_to_copy(double dest[], double source[])
 {
     dest = source;
-    
     /* point two*/
-    
     return;
 }
 

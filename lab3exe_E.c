@@ -54,10 +54,7 @@ int main(void)
     return 0;
 }
 
-int substring(const char *s1, const char* s2)
-{
-    // This function is incomplete. Student must remove the next line and
-    // complete this function...
+int substring(const char *s1, const char* s2) {
     int i, j;
     for (i = 0; s1[i] != '\0'; i++){
         for (j = 0; s2[j] != '\0' && s1[i + j] == s2[j]; j++)
@@ -67,9 +64,7 @@ int substring(const char *s1, const char* s2)
     return 0;
 }
 
-void select_negatives(const int *source, int n_source,
-                      int* negatives_only, int* number_of_negatives)
-{
+void select_negatives(const int *source, int n_source, int* negatives_only, int* number_of_negatives) {
     int i, j;
     for (i = 0, j = 0; i < n_source; i++){
         if (source[i] < 0) {
@@ -77,7 +72,6 @@ void select_negatives(const int *source, int n_source,
             (*number_of_negatives)++; j++;
         }
     }
-    return;
 }
 
 

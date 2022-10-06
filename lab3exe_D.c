@@ -42,13 +42,11 @@ void pascal_triangle(int n) {
         // Loops through "Columns"
         for (j = 0; j <= i; j++) {
             // Prevent division by zero & set 1 for first iteration
-            if (i == 0 || j == 0) {
+            if (i == 0 || j == 0)
                 num = 1;
-            }   
             // Calculate the number
-            else {
+            else
                 num = num * (i - j + 1) / j;
-            }
             printf("%6d", num);
         }
         printf("\n");
