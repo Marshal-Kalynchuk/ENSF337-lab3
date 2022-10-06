@@ -70,13 +70,14 @@ int substring(const char *s1, const char* s2)
 void select_negatives(const int *source, int n_source,
                       int* negatives_only, int* number_of_negatives)
 {
-    // This function is incomplete. Student must remove the next line and
-    // complete this function...
-    printf ("\nFunction select_negatives is incomplete and doesn't work.\n");
-    
-    int i;
-    *number_of_negatives = 0;
-    
+    int i, j;
+    for (i = 0, j = 0; i < n_source; i++){
+        if (source[i] < 0) {
+            negatives_only[j] = source[i];
+            (*number_of_negatives)++; j++;
+        }
+    }
     return;
 }
+
 
