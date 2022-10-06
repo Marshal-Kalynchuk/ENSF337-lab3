@@ -58,8 +58,12 @@ int substring(const char *s1, const char* s2)
 {
     // This function is incomplete. Student must remove the next line and
     // complete this function...
-    printf ("\nFunction substring is incmplete and doesn't work.\n");
-    
+    int i, j;
+    for (i = 0; s1[i] != '\0'; i++){
+        for (j = 0; s2[j] != '\0' && s1[i + j] == s2[j]; j++)
+        if (s2[j + 1] == '\0')
+            return 1;
+    }
     return 0;
 }
 
@@ -68,7 +72,7 @@ void select_negatives(const int *source, int n_source,
 {
     // This function is incomplete. Student must remove the next line and
     // complete this function...
-    printf ("\nFunction select_negatives is incmplete and doesn't work.\n");
+    printf ("\nFunction select_negatives is incomplete and doesn't work.\n");
     
     int i;
     *number_of_negatives = 0;
