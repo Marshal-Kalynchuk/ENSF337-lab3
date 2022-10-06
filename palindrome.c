@@ -42,7 +42,7 @@ int main(void)
     while(strcmp(str, "done") !=0) /* Keep looping unless str matches "done". */
     {
         
-#if 0
+#if 1
         strip_out(str);
         
         p = is_palindrome(str);
@@ -64,7 +64,24 @@ int main(void)
     return 0;
 }
 
+int is_palindrome(const char *str){
+    for (int i = 0, len = strlen(str) - 1; i <= len; i++) {
+        if (str[i] != str[len - i])
+            return 0;
+    }
+    return 1;
+}
 
+void strip_out(char *str) {
+    int i = 0, j = 0;
+    while (str[i])
+	{
+		if (str[i] != ' ')
+          str[j++] = tolower(str[i]);
+		i++;
+	}
+	str[j] = '\0';
+}
 
 
 
