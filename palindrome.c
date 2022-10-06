@@ -74,16 +74,10 @@ int is_palindrome(const char *str){
 
 void strip_out(char *str) {
     int i = 0, j = 0;
-    while (str[i])
-	{
-		if (str[i] != ' ')
+    while (str[i]) {
+		if (isalnum(str[i]))
           str[j++] = tolower(str[i]);
 		i++;
 	}
 	str[j] = '\0';
 }
-
-
-
-
-
